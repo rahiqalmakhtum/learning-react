@@ -3,7 +3,7 @@ import Card from "./components/Card.jsx";
 import "./App.css";
 
 function App() {
-  let [counter, setCounter] = useState(0);
+  // let [counter, setCounter] = useState(0);
   let myObj = {
     tittle: "My first NFT",
     price: "10.00 ETH",

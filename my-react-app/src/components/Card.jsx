@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-export default function Card({tittle, price}) {
-    console.log("Props:", {tittle, price});
-    console.log("Hello from Card component");
-    console.log(tittle);
-    console.log(price);
+export default function Card({name, price}) {
+    // console.log("Props:", {tittle, price});
+    // console.log("Hello from Card component");
+    // console.log(tittle);
+    // console.log(price);
     
     
   return (
@@ -17,7 +17,7 @@ export default function Card({tittle, price}) {
       </div>
       <div className="flex flex-col py-3 px-3 pb-10">
         <div className="flex justify-between ">
-          <h1 className="font-bold ">{tittle}</h1>
+          <h1 className="font-bold ">{name}</h1>
           <h1>{price}</h1>
         </div>
         <div className="flex  justify-between">
