@@ -1,13 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
-export default function Card({name, price}) {
-    // console.log("Props:", {tittle, price});
-    // console.log("Hello from Card component");
-    // console.log(tittle);
-    // console.log(price);
-    
-    
+export default function Card({ name, price }) {
+  // console.log("Props:", {tittle, price});
+  // console.log("Hello from Card component");
+  // console.log(tittle);
+  // console.log(price);
+
   return (
-    <div className="w-60 flex flex-col rounded-xl bg-black min-h-[19rem] mb-4">
+    <div className="w-60 flex flex-col rounded-xl bg-black min-h-16 mb-4">
       <div>
         <img
           src="https://cdn.vox-cdn.com/thumbor/ZkmdkuJUTLgJh96_FWQ5zweGGxo=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/23084330/bored_ape_nft_accidental_.jpg"
@@ -24,7 +23,7 @@ export default function Card({name, price}) {
           <p>#345</p>
           <p>0.01</p>
         </div>
-      </div> 
+      </div>
     </div>
   );
 }
