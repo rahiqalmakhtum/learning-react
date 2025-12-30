@@ -7,7 +7,10 @@ function App() {
   const [color, setColor] = useState("");
 
   return (
-    <div className="h-screen w-screen" style={{ backgroundColor: color }}>
+    <div
+      className="h-screen w-screen transition-colors duration-200"
+      style={{ backgroundColor: color }}
+    >
       {/* without flex-wap the width of the container becomes full width of the
       screen */}
       <div className="fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2">
