@@ -13,7 +13,7 @@ function Login(){
     }
     return(
         <div>
-            <h1>Login</h1>
+            <h2>Login</h2>
             <input type="text" 
             value={username}
             onChange={(e) => setUsername(e.target.value)}

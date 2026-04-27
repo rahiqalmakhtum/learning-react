@@ -12,7 +12,7 @@ function App() {
 
   return (
     <UserContextProvider>
-      <h1>Hello world!</h1>
+      <h1>Welcome to the App</h1>
       <Login></Login>
       <Profile></Profile>
     </UserContextProvider>

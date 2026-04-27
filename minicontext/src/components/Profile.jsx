@@ -9,7 +9,7 @@ const Profile = () => {
 
   return (
     <div>
-      <h1>Profile</h1>
+      <h3>Profile</h3>
       <p>Name: {user.username}</p>
       <p>Password: {user.password}</p>
     </div>
