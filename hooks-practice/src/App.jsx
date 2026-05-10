@@ -59,27 +59,69 @@
 //   );
 // }
 
+// // export default App;
+
+// import React from "react";
+// import { useState, useEffect } from "react";
+
+// function App() {
+//   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+//   const handleResize = () => {
+//     setWindowWidth(window.innerWidth);
+//   };
+
+//   useEffect(() => {
+//     window.addEventListener("resize", handleResize);
+//     // This runs when the component is unmounted/destroyed, and it removes the event listener to prevent memory leaks.
+//     return () => {
+//       window.removeEventListener("resize", handleResize);
+//     };
+//   }, []);
+
+//   return <>{windowWidth}</>;
+// }
+
+// export default App;
+//==================useEffect Hook=======================
+
+//==================useEffect Hook Infinite Loop - The Problem =======================
+// import React from "react";
+// import { useState, useEffect } from "react";
+
+// function App() {
+//   const [count, setCount] = useState(0);
+
+//   useEffect(() => {
+//     setCount((prevCount) => prevCount + 1);
+//   }, [count]);
+
+//   return (
+//     <>
+//       <h1>I rendered {count} times</h1>
+//     </>
+//   );
+// }
+
 // export default App;
 
-import React from "react";
+import React, { useRef } from "react";
 import { useState, useEffect } from "react";
 
 function App() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-  };
+  const [name, setName] = useState("");
+  const renderCount = useRef(0);
 
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    // This runs when the component is unmounted/destroyed, and it removes the event listener to prevent memory leaks.
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+    renderCount.current = renderCount.current + 1;
+  });
 
-  return <>{windowWidth}</>;
+  return (
+    <>
+      <input value={name} onChange={(e) => setName(e.target.value)} />
+      <h1>My name is {name}</h1>
+      <h1>I rendered {renderCount.current} times</h1>
+    </>
+  );
 }
-
 export default App;
