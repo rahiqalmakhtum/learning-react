@@ -105,23 +105,25 @@
 
 // export default App;
 
-import React, { useRef } from "react";
-import { useState, useEffect } from "react";
+//==================useRef Hook=======================
+// import React, { useRef } from "react";
+// import { useState, useEffect } from "react";
 
-function App() {
-  const [name, setName] = useState("");
-  const renderCount = useRef(0);
+// function App() {
+//   const [name, setName] = useState("");
+//   const renderCount = useRef(0);
 
-  useEffect(() => {
-    renderCount.current = renderCount.current + 1;
-  });
+//   useEffect(() => {
+//     renderCount.current = renderCount.current + 1;
+//   });
 
-  return (
-    <>
-      <input value={name} onChange={(e) => setName(e.target.value)} />
-      <h1>My name is {name}</h1>
-      <h1>I rendered {renderCount.current} times</h1>
-    </>
-  );
-}
-export default App;
+//   return (
+//     <>
+//       <input value={name} onChange={(e) => setName(e.target.value)} />
+//       <h1>My name is {name}</h1>
+//       <h1>I rendered {renderCount.current} times</h1>
+//     </>
+//   );
+// }
+// export default App;
+
